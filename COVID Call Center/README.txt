@@ -1,0 +1,14 @@
+From the start, the program checks the number of argument provided and whether the arguments provided is an integer. If the arguments given does not satisfy the program, it will provide a corresponding error message and exit out of the program.
+
+Once the correct arguments are input, counting semaphores for the callers, connections, and operators will be initialized. There will also be an array of threads which takes in the integer in the argument provided as its size. Then, a for loop is implemented for the creation of each thread. If any thread was unsuccessfully created due to threads limitation in a system, the program will delay the creation of that thread by a second until other threads could exit and allows new threads to be created. In addition, another for loop was implemented to join the threads.
+
+When the threads are created successfully, it will call the thread function "phonecall". At the beginning of the function, an int variable will be use as the caller's id. A counting semaphore for the caller is used here so that each caller has a unqiue caller's id. After assignment a caller with their unique id, a global variable for the caller's id will be updated so that the next caller can get their id. When the caller is connecting to a line, if all lines are currently busy, the caller will be put on hold and attempt to reconnect until they are connected with a line. This was implemented with a while loop with the condition being as long as the number of caller connected at any given moment equals to the number of lines. Once the caller is connected to a line, the number of caller connected is incremented. Counting semaphore for the connections is used here. However, the number of operators is not the same as the number of lines. Therefore, counting semaphore for the operators is used so that the caller would have to wait for the next availible operator. After simulating that they made their appointment by delaying the program by 3 seconds, the number of caller connected will be decrease by 1 to indicate a caller has finished their call. The format of the call looks like the following:
+
+Caller [caller's id] is attempting to connect...
+Line is busy, caller [caller's id] attempting to reconnect...
+Caller [caller's id] connects to an available line, call ringing...
+Caller [caller's id] is speaking to an operator in the local health center.
+Caller [caller's id] has made an appointment for the test! The operator has left...
+Caller [caller's id] has hung up!
+
+Lastly, after all threads have exited. All the semaphores intiailized for counting were freed. The program is compiled using "make" from the Makefile.
