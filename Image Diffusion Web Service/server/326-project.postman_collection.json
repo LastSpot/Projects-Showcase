@@ -1,0 +1,463 @@
+{
+	"info": {
+		"_postman_id": "43636d55-3b90-4e2f-8a02-755c96074af8",
+		"name": "326-project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15954857",
+		"_collection_link": "https://cs326-team-30.postman.co/workspace/Team-Workspace~25881dbe-9f19-45fd-8631-15d5f8e0e699/collection/15954857-43636d55-3b90-4e2f-8a02-755c96074af8?action=share&creator=15954857&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "testUser",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "P@ssw0rd",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{APIURL}}/register",
+					"host": [
+						"{{APIURL}}"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "testUser",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "P@ssw0rd",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{APIURL}}/login",
+					"host": [
+						"{{APIURL}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createModel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "model1",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "this is description string",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "checkpoint",
+							"type": "text"
+						},
+						{
+							"key": "tags",
+							"value": "tag41,tag49,tag73",
+							"type": "text"
+						},
+						{
+							"key": "downloadLink",
+							"value": "http://download.link",
+							"type": "text"
+						},
+						{
+							"key": "fineTuneMethod",
+							"value": "stable diffusion",
+							"type": "text"
+						},
+						{
+							"key": "baseModel",
+							"value": "SD1.5",
+							"type": "text"
+						},
+						{
+							"key": "pictureLink",
+							"value": "http://picture.link",
+							"type": "text"
+						},
+						{
+							"key": "license",
+							"value": "none",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{APIURL}}/createModel",
+					"host": [
+						"{{APIURL}}"
+					],
+					"path": [
+						"createModel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dumpTags",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{APIURL}}/dumpTags",
+					"host": [
+						"{{APIURL}}"
+					],
+					"path": [
+						"dumpTags"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dumpModels",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{APIURL}}/dumpModels",
+					"host": [
+						"{{APIURL}}"
+					],
+					"path": [
+						"dumpModels"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dumpUserLogin",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{APIURL}}/dumpUserLogin",
+					"host": [
+						"{{APIURL}}"
+					],
+					"path": [
+						"dumpUserLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteTag",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "tag",
+							"value": "tag1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{APIURL}}/deleteTag",
+					"host": [
+						"{{APIURL}}"
+					],
+					"path": [
+						"deleteTag"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteModel",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "Fixflex",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{APIURL}}/deleteModel",
+					"host": [
+						"{{APIURL}}"
+					],
+					"path": [
+						"deleteModel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "tags",
+							"value": "tag1",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{APIURL}}/search?query=Bypass Right Ventricle to Right",
+					"host": [
+						"{{APIURL}}"
+					],
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "Bypass Right Ventricle to Right"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchModelByTags",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "tags",
+							"value": "tag1",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{APIURL}}/searchModelByTags?tags=tag41,tag49,tag73",
+					"host": [
+						"{{APIURL}}"
+					],
+					"path": [
+						"searchModelByTags"
+					],
+					"query": [
+						{
+							"key": "tags",
+							"value": "tag41,tag49,tag73"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetchModelById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{APIURL}}/fetchModelById?id=Fintone",
+					"host": [
+						"{{APIURL}}"
+					],
+					"path": [
+						"fetchModelById"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "Fintone"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTopTags",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{APIURL}}/getTopTags",
+					"host": [
+						"{{APIURL}}"
+					],
+					"path": [
+						"getTopTags"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "likeModel",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "Fintone",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{APIURL}}/likeModel",
+					"host": [
+						"{{APIURL}}"
+					],
+					"path": [
+						"likeModel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unlikeModel",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "Fintone",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{APIURL}}/unlikeModel",
+					"host": [
+						"{{APIURL}}"
+					],
+					"path": [
+						"unlikeModel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateModelView",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{APIURL}}/updateModelView",
+					"host": [
+						"{{APIURL}}"
+					],
+					"path": [
+						"updateModelView"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateModelShare",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "Fintone",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{APIURL}}/updateModelShare",
+					"host": [
+						"{{APIURL}}"
+					],
+					"path": [
+						"updateModelShare"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
