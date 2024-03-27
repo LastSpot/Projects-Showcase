@@ -94,6 +94,7 @@ public class Main {
 
                 case "quit":
                     program = false;
+                    methods.end();
                     break;
             
                 default:
