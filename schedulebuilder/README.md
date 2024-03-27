@@ -1,1 +1,3 @@
-java -jar target/schedulebuilder-1.0-SNAPSHOT.jar
+## I hate some school schedule building template so I made this
+
+Run Main.java
