@@ -87,14 +87,17 @@ public class MongoDBConnector {
         return course;
     }
 
-    public List<String> allCourses() {
-        List<String> courses = new ArrayList<>();
+    public List<Course> allCourses() {
+        List<Course> courses = new ArrayList<>();
         MongoCursor<Document> cursor = collection.find().iterator();
         while (cursor.hasNext()) {
             Document newCourse = cursor.next();
             String coursName = newCourse.getString("name");
+            String day = newCourse.getString("day");
+            int start = newCourse.getInteger("start");
+            int end = newCourse.getInteger("end");
             if (!courses.contains(coursName)) {
-                courses.add(coursName);
+                courses.add(new Course(coursName, day, start, end));
             }
         }
         return courses;

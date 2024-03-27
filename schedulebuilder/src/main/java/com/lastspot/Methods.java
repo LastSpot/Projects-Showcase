@@ -164,16 +164,12 @@ public class Methods {
     }
 
     public void getAllCourses() {
-        List<String> allCourses = db.allCourses();
+        List<Course> allCourses = db.allCourses();
         System.out.println();
-        System.out.print("List of all available courses:");
+        System.out.println("List of all available courses:");
         for (int i = 0; i < allCourses.size(); i++) {
-            if (i == allCourses.size() - 1) {
-                System.out.print(" " + allCourses.get(i));
-            }
-            else {
-                System.out.print(" " + allCourses.get(i) + ",");
-            }
+            Course course = allCourses.get(i);
+            System.out.println(course.getName() + " / " + course.getWeekDay() + " / " + course.getStart() + " - " + course.getEnd());
         }
         System.out.println();
     }

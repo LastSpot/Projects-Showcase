@@ -17,6 +17,9 @@ public class Main {
         System.out.println("show: show all possible courses");
         System.out.println("quit: quit the program");
         System.out.println("-----------------------------------------");
+        System.out.println("The time format is by military time. Example:");
+        System.out.println("1000 is 10:00 AM and 1530 is 3:30 PM");
+        System.out.println("-----------------------------------------");
         System.out.println();
     }
 
