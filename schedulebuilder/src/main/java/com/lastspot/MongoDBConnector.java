@@ -61,11 +61,11 @@ public class MongoDBConnector {
                             .append("end", course.getEnd());
         Document foundDoc = collection.find(doc).first();
         if (foundDoc != null) {
-            String coursName = foundDoc.getString("name");
+            String name = foundDoc.getString("name");
             String day = foundDoc.getString("day");
             int start = foundDoc.getInteger("start");
             int end = foundDoc.getInteger("end");
-            return new Course(coursName, day, start, end);
+            return new Course(name, day, start, end);
         }
         else {
             return null;
@@ -78,11 +78,11 @@ public class MongoDBConnector {
         MongoCursor<Document> cursor = collection.find(doc).iterator();
         while (cursor.hasNext()) {
             Document newCourse = cursor.next();
-            String coursName = newCourse.getString("name");
+            String courseName = newCourse.getString("name");
             String day = newCourse.getString("day");
             int start = newCourse.getInteger("start");
             int end = newCourse.getInteger("end");
-            course.add(new Course(coursName, day, start, end));
+            course.add(new Course(courseName, day, start, end));
         }
         return course;
     }
@@ -92,12 +92,12 @@ public class MongoDBConnector {
         MongoCursor<Document> cursor = collection.find().iterator();
         while (cursor.hasNext()) {
             Document newCourse = cursor.next();
-            String coursName = newCourse.getString("name");
+            String name = newCourse.getString("name");
             String day = newCourse.getString("day");
             int start = newCourse.getInteger("start");
             int end = newCourse.getInteger("end");
-            if (!courses.contains(coursName)) {
-                courses.add(new Course(coursName, day, start, end));
+            if (!courses.contains(newCourse)) {
+                courses.add(new Course(name, day, start, end));
             }
         }
         return courses;
