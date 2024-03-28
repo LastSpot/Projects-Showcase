@@ -26,7 +26,6 @@ public class Main {
     public static void main( String[] args ) {
         Methods methods = new Methods();
         Scanner scanner = new Scanner(System.in);
-        List<Course> courses = new ArrayList<>();
         boolean program = true;
 
         while (program) {
