@@ -12,7 +12,7 @@ import java.util.List;
 import org.bson.Document;
 
 public class MongoDBConnector {
-    private static final String connectionString = "mongodb+srv://artificialvoidstorage:bf0rd8pcYhSAXOXH@cluster0.wydfctd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+    private static final String connectionString = "mongodb+srv://guest:bS1HP6kcAxFlGQAb@cluster0.wydfctd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
     private static final String DATABASE_NAME = "courses";
     private static final String COLLECTION_NAME = "course";
 
